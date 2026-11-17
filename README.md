@@ -12,7 +12,7 @@
 
 A native desktop viewer for reading Markdown files and browsing folders of Markdown. Open a file, follow its heading outline, or search a folder without moving into an editor.
 
-The app can be built from source on Linux and macOS. There are no downloadable binaries yet, and Windows has not been verified. The project is preparing for a public GitHub release.
+The app can be built from source on Linux and macOS. There are no downloadable binaries yet, and Windows has not been verified. This is an early alpha: expect rough edges.
 
 This application is inspired by the most excellent Markdown Preview for MacOS https://github.com/pluk-inc/markdown-preview.
 
