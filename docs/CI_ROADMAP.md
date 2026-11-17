@@ -33,6 +33,16 @@ time.
 | `bundle-macos` | Builds and verifies the signed-ad-hoc `.app`/`.dmg` in CI. | When release packaging is automated for real (tracked separately: signing, notarization, universal binary, tag-triggered release workflow). Until then this duplicates the manual build done for each alpha release. |
 | `bundle-linux` | Builds the AppImage and smoke-tests it under Xvfb. | Same as `bundle-macos` — once release packaging is automated, or once Linux distribution is prioritized again. |
 
+## v0.1.0-alpha ships Linux only
+
+The macOS arm64 build (ad-hoc signed `.app`/`.dmg` via
+`scripts/bundle-macos.sh`) is deferred to the next release. It isn't
+essential for this first alpha and doing it properly needs hands-on
+verification on the actual Mac that builds it, which didn't fit this cycle.
+Not a regression — macOS support in the source and bundling script is
+unchanged; only the packaged release artifact is missing from
+v0.1.0-alpha. Include it in the next tagged release.
+
 ## Restoring a paused job
 
 Delete its `if: false` line (and the comment above it). No other change
