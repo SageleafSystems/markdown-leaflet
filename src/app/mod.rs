@@ -95,7 +95,12 @@ fn app_icon() -> iced::window::Icon {
     let mut reader = decoder
         .read_info()
         .expect("embedded app icon should decode");
-    let mut pixels = vec![0; reader.output_buffer_size()];
+    let mut pixels = vec![
+        0;
+        reader
+            .output_buffer_size()
+            .expect("embedded app icon should report an output buffer size")
+    ];
     let frame = reader
         .next_frame(&mut pixels)
         .expect("embedded app icon should have a frame");
