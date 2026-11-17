@@ -49,7 +49,7 @@ image = { version = "0.25", default-features = false, features = ["png", "jpeg",
 iced = { version = "0.14.0", features = ["advanced", "markdown", "highlighter", "tokio", "svg", "image-without-codecs"] }
 open = "5.4.4"
 pulldown-cmark = { version = "0.13.6", default-features = false }
-png = "0.17.16"
+png = "0.18.1"
 rfd = "0.18.0"
 serde = { version = "1.0.229", features = ["derive"] }
 serde-saphyr = { version = "2.1.1", default-features = false, features = ["deserialize"] }
