@@ -98,7 +98,7 @@ fn accelerator_for(command: Command) -> Option<Accelerator> {
     if chord.alt {
         mods |= Modifiers::ALT;
     }
-    Some(Accelerator::new(Some(mods), code))
+    Some(Accelerator::new(mods, code))
 }
 
 /// Installs the menu bar once. Call it after the event loop has launched:
