@@ -7,16 +7,16 @@ on:
 permissions:
   contents: read
 
+# Trimmed for the v0.1.0-alpha stage: only the jobs that gate basic correctness on the two
+# supported platforms run by default. The rest are paused (`if: false`), not deleted — see
+# docs/CI_ROADMAP.md for what each one covers and when to turn it back on.
 jobs:
   check:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.os }}
-    # Windows has only been cross-linted (scripts/check-platforms.sh) and never run. Report its
-    # result without failing the build until a first run shows what it finds; then remove this.
-    continue-on-error: ${{ matrix.os == 'windows-latest' }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Install Linux system libraries
@@ -37,6 +37,8 @@ jobs:
         run: cargo build --release --locked
 
   msrv:
+    # Paused for the alpha stage; see docs/CI_ROADMAP.md.
+    if: false
     # `rust-version` in Cargo.toml is a promise. Build with exactly that toolchain, ignoring
     # rust-toolchain.toml's "stable", so a newer language or library feature cannot slip in.
     runs-on: ubuntu-latest
@@ -53,6 +55,8 @@ jobs:
         run: cargo check --locked --all-targets
 
   deny:
+    # Paused for the alpha stage; see docs/CI_ROADMAP.md.
+    if: false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -61,6 +65,8 @@ jobs:
           command: check advisories licenses sources
 
   bundle-macos:
+    # Paused for the alpha stage; see docs/CI_ROADMAP.md.
+    if: false
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -73,6 +79,8 @@ jobs:
         run: scripts/bundle-macos.sh dmg
 
   bundle-linux:
+    # Paused for the alpha stage; see docs/CI_ROADMAP.md.
+    if: false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -101,6 +109,8 @@ jobs:
           wait "$pid" || true
 
   docs:
+    # Paused for the alpha stage; see docs/CI_ROADMAP.md.
+    if: false
     runs-on: ubuntu-latest
     env:
       RUSTDOCFLAGS: -D warnings
