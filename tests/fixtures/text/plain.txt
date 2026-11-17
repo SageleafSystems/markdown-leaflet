@@ -1,0 +1,22 @@
+# Not a heading
+Plain text is shown exactly as typed, in a monospace face.
+
+* not a bullet
+- not a bullet either
+1. not a numbered list
+> not a quote
+**not bold**, _not italic_, `not code`, [not a link](https://example.com)
+![not an image](nope.png)
+
+---
+title: not frontmatter
+---
+
+    four leading spaces stay four leading spaces
+	a leading tab stays a tab
+trailing spaces   
+
+Blank lines above and below are kept.
+
+
+Two blank lines above this one.

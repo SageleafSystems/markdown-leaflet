@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Markdown Leaflet
+Comment=A native desktop viewer for Markdown files and folders
+Exec=markdown-leaflet %f
+Icon=markdown-leaflet
+Terminal=false
+Categories=Utility;TextEditor;
+MimeType=text/markdown;
+StartupWMClass=markdown-leaflet

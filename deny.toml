@@ -1,0 +1,32 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+[advisories]
+# Every entry below is an "unmaintained" notice for a transitive dependency of iced (its
+# highlighter, wgpu, resvg and, on some platforms, zbus) with no safe upgrade available. None is a known vulnerability. Revisit when those
+# upstreams move; remove an entry as soon as its crate leaves Cargo.lock.
+ignore = [
+    { id = "RUSTSEC-2025-0141", reason = "bincode 1.x via syntect (iced_highlighter); no replacement available" },
+    { id = "RUSTSEC-2024-0436", reason = "paste via wgpu; macro-only, no runtime code" },
+    { id = "RUSTSEC-2026-0441", reason = "pin-utils via the async stack; archived, trivial crate" },
+    { id = "RUSTSEC-2024-0370", reason = "proc-macro-error via a platform dependency; build-time only" },
+    { id = "RUSTSEC-2026-0206", reason = "rustybuzz via resvg/usvg (SVG text); waiting on upstream" },
+    { id = "RUSTSEC-2026-0192", reason = "ttf-parser via fontdb; waiting on upstream" },
+    { id = "RUSTSEC-2024-0320", reason = "yaml-rust via syntect (iced_highlighter); waiting on upstream" },
+    { id = "RUSTSEC-2026-0371", reason = "zbus_names via zbus (platform theme detection); waiting on upstream" },
+    { id = "RUSTSEC-2026-0370", reason = "zvariant via zbus (platform theme detection); waiting on upstream" },
+    { id = "RUSTSEC-2026-0372", reason = "zvariant_derive via zbus (platform theme detection); waiting on upstream" },
+]
+
+[licenses]
+allow = [
+    "MIT", "Apache-2.0", "Apache-2.0 WITH LLVM-exception", "BSD-2-Clause", "BSD-3-Clause",
+    "ISC", "Zlib", "Unlicense", "CC0-1.0", "MPL-2.0", "Unicode-3.0", "BSL-1.0",
+    "GPL-3.0-or-later",
+]
+confidence-threshold = 0.9
+
+[bans]
+multiple-versions = "warn"
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"

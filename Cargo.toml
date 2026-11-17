@@ -1,0 +1,74 @@
+[package]
+name = "markdown-leaflet"
+version = "0.1.0"
+edition = "2024"
+description = "A native desktop viewer for Markdown files and folders"
+publish = false
+license = "GPL-3.0-or-later"
+rust-version = "1.93"
+readme = "README.md"
+keywords = ["markdown", "viewer", "desktop", "iced"]
+categories = ["gui", "text-processing"]
+
+[lints.rust]
+# `deny`, not `forbid`: one macOS module needs `unsafe` for Objective-C and allows it locally.
+unsafe_code = "deny"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+unwrap_used = "warn"
+expect_used = "warn"
+# A pedantic subset that costs little to satisfy. Left out on purpose: the numeric-cast lints
+# (pixel and layout math in a GUI trips them constantly), `needless_pass_by_value` and
+# `large_types_passed_by_value` (update handlers take `Message` by value, and iced's view builders
+# take widgets by value), and `too_many_lines` (tracked in the refactor issues).
+elidable_lifetime_names = "warn"
+trivially_copy_pass_by_ref = "warn"
+semicolon_if_nothing_returned = "warn"
+match_wildcard_for_single_variants = "warn"
+match_same_arms = "warn"
+enum_glob_use = "warn"
+needless_raw_string_hashes = "warn"
+if_not_else = "warn"
+map_unwrap_or = "warn"
+redundant_closure_for_method_calls = "warn"
+explicit_iter_loop = "warn"
+assigning_clones = "warn"
+single_match_else = "warn"
+format_collect = "warn"
+ref_option = "warn"
+doc_markdown = "warn"
+unused_self = "warn"
+
+[dependencies]
+chrono = { version = "0.4.45", default-features = false, features = ["std", "clock"] }
+dark-light = { version = "3.0.0", default-features = false }
+dirs = "7.0.0"
+fuzzy-matcher = "0.3.7"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "gif", "webp", "bmp"] }
+iced = { version = "0.14.0", features = ["advanced", "markdown", "highlighter", "tokio", "svg", "image-without-codecs"] }
+open = "5.4.4"
+pulldown-cmark = { version = "0.12.2", default-features = false }
+png = "0.17.16"
+rfd = "0.17.2"
+serde = { version = "1.0.229", features = ["derive"] }
+serde-saphyr = { version = "2.1.1", default-features = false, features = ["deserialize"] }
+toml = "1.1.8"
+toml_edit = "0.25.2"
+thiserror = "2.0.21"
+tokio = { version = "1", features = ["rt", "time"] }
+trash = "5.3.0"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+muda = "0.17"
+objc2 = "0.6.5"
+objc2-foundation = { version = "0.3.2", default-features = false, features = ["std", "NSArray", "NSObject", "NSString", "NSURL"] }
+
+[dev-dependencies]
+proptest = { version = "1", default-features = false, features = ["std"] }
+
+# Dependencies (iced layout, text shaping, the markdown parser) are far too slow unoptimized
+# to preview large documents, so optimize them even in dev builds. Our own crate stays fast to
+# rebuild.
+[profile.dev.package."*"]
+opt-level = 3

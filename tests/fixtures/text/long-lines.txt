@@ -1,0 +1,48 @@
+A single very long line should wrap to the preview width and re-wrap when
+the window or a gutter resizes:
+
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+
+An unbroken token with no spaces: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Line 1 of 40 follows, to check scrolling, the minimap and Find across many lines.
+line 01: pack my box with five dozen liquor jugs
+line 02: pack my box with five dozen liquor jugs
+line 03: pack my box with five dozen liquor jugs
+line 04: pack my box with five dozen liquor jugs
+line 05: pack my box with five dozen liquor jugs
+line 06: pack my box with five dozen liquor jugs
+line 07: pack my box with five dozen liquor jugs
+line 08: pack my box with five dozen liquor jugs
+line 09: pack my box with five dozen liquor jugs
+line 10: pack my box with five dozen liquor jugs
+line 11: pack my box with five dozen liquor jugs
+line 12: pack my box with five dozen liquor jugs
+line 13: pack my box with five dozen liquor jugs
+line 14: pack my box with five dozen liquor jugs
+line 15: pack my box with five dozen liquor jugs
+line 16: pack my box with five dozen liquor jugs
+line 17: pack my box with five dozen liquor jugs
+line 18: pack my box with five dozen liquor jugs
+line 19: pack my box with five dozen liquor jugs
+line 20: pack my box with five dozen liquor jugs
+line 21: pack my box with five dozen liquor jugs
+line 22: pack my box with five dozen liquor jugs
+line 23: pack my box with five dozen liquor jugs
+line 24: pack my box with five dozen liquor jugs
+line 25: pack my box with five dozen liquor jugs
+line 26: pack my box with five dozen liquor jugs
+line 27: pack my box with five dozen liquor jugs
+line 28: pack my box with five dozen liquor jugs
+line 29: pack my box with five dozen liquor jugs
+line 30: pack my box with five dozen liquor jugs
+line 31: pack my box with five dozen liquor jugs
+line 32: pack my box with five dozen liquor jugs
+line 33: pack my box with five dozen liquor jugs
+line 34: pack my box with five dozen liquor jugs
+line 35: pack my box with five dozen liquor jugs
+line 36: pack my box with five dozen liquor jugs
+line 37: pack my box with five dozen liquor jugs
+line 38: pack my box with five dozen liquor jugs
+line 39: pack my box with five dozen liquor jugs
+line 40: pack my box with five dozen liquor jugs

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="linear-gradient-1" x1="18" y1="12" x2="18" y2="244" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d5dbe8"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="137.2" y1="12" x2="291.304" y2="135.991" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5df08f"/>
+      <stop offset="0.5" stop-color="#25cf62"/>
+      <stop offset="1" stop-color="#079a47"/>
+    </linearGradient>
+  </defs>
+  <title>icon_small.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path id="Paper" d="M34 12 L126 12 C187.856 12 238 62.144 238 124 L238 228 C238 236.837 230.837 244 222 244 L130 244 C68.144 244 18 193.856 18 132 L18 28 C18 19.163 25.163 12 34 12 Z" fill="url(#linear-gradient-1)" stroke="#aab3c4" stroke-width="8"/>
+    <path id="Rendered_half" d="M128 12 L126 12 C187.856 12 238 62.144 238 124 L238 228 C238 236.837 230.837 244 222 244 L128 244 Z" fill="url(#linear-gradient-2)"/>
+    <g id="Rendered_lines">
+      <path d="M164 76 L204 76 C210.627 76 216 81.373 216 88 L216 88 C216 94.627 210.627 100 204 100 L164 100 C157.373 100 152 94.627 152 88 L152 88 C152 81.373 157.373 76 164 76 Z" fill="#ffffff"/>
+      <path d="M164 116 L192 116 C198.627 116 204 121.373 204 128 L204 128 C204 134.627 198.627 140 192 140 L164 140 C157.373 140 152 134.627 152 128 L152 128 C152 121.373 157.373 116 164 116 Z" fill="#ffffff" fill-opacity="0.75"/>
+      <path d="M164 156 L204 156 C210.627 156 216 161.373 216 168 L216 168 C216 174.627 210.627 180 204 180 L164 180 C157.373 180 152 174.627 152 168 L152 168 C152 161.373 157.373 156 164 156 Z" fill="#ffffff" fill-opacity="0.75"/>
+    </g>
+    <g id="Hash">
+      <line x1="60.8" y1="94.4" x2="50.2" y2="167" fill="none" stroke="#1c1c1f" stroke-width="20" stroke-linecap="round"/>
+      <line x1="93.8" y1="94.4" x2="83.2" y2="167" fill="none" stroke="#1c1c1f" stroke-width="20" stroke-linecap="round"/>
+      <line x1="37.7" y1="117.5" x2="107.6" y2="117.5" fill="none" stroke="#1c1c1f" stroke-width="20" stroke-linecap="round"/>
+      <line x1="36.4" y1="143.9" x2="106.3" y2="143.9" fill="none" stroke="#1c1c1f" stroke-width="20" stroke-linecap="round"/>
+    </g>
+    <path id="Rail" d="M128 4 L128 4 C133.523 4 138 8.477 138 14 L138 242 C138 247.523 133.523 252 128 252 L128 252 C122.477 252 118 247.523 118 242 L118 14 C118 8.477 122.477 4 128 4 Z" fill="#dfe4ee" stroke="#9aa3b5" stroke-width="2"/>
+    <path id="Rail_highlight" d="M125.5 12 L125.5 12 C126.881 12 128 13.119 128 14.5 L128 241.5 C128 242.881 126.881 244 125.5 244 L125.5 244 C124.119 244 123 242.881 123 241.5 L123 14.5 C123 13.119 124.119 12 125.5 12 Z" fill="#ffffff"/>
+  </g>
+</svg>
