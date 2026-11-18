@@ -12,7 +12,7 @@ Branch per issue off `main` (for example `issue-<n>-short-name`), and end the co
 
 ## Commit messages
 
-Use Conventional Commits: a `type(scope): summary` subject in the imperative, under 72 characters. Types are `feat`, `fix`, `refactor`, `perf`, `test`, `docs`, `build`, and `chore`; the scope names the area touched (`preview`, `nav`, `gutters`, `menu`, `find`, `theme`, `agents`). The body is a one- or two-sentence summary of what the change does for the user, then a succinct bullet list of the notable changes. Close with `Refs #<n>` when there is an issue, then the co-author trailer.
+Use Conventional Commits: a `type(scope): summary` subject in the imperative, under 72 characters. Types are `feat`, `fix`, `refactor`, `perf`, `test`, `docs`, `build`, and `chore`; the scope names the area touched (`preview`, `nav`, `gutters`, `menu`, `find`, `theme`, `agents`). The body is a one- or two-sentence summary of what the change does for the user, then a succinct bullet list of the notable changes. Close with `Refs #<n>` when there is an issue. Never add a co-author trailer or any agent-attribution line (global rule; no repository may override it).
 
 ```text
 feat(preview): select and copy rendered Markdown text
